@@ -36,3 +36,55 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+**请求URL：** 
+- ` /tv-delivery-fee-template-entity/queryDeltemp `
+  
+**请求方式：**
+- POST 
+
+**参数：** 
+
+|参数名|必选|类型|说明|
+|:----    |:---|:----- |-----   |
+|goodsGroupId |是  |Integer |商品组id  |
+|country |是  |String | 城市    |
+|regions     |是  |String | 地区   |
+|goodsId     |是  |Integer | 商品id   |
+|num     |是  |Integer | 数量  |
+
+ **返回示例**
+
+``` 
+{
+    "code": 200,
+    "msg": "处理成功!",
+    "data": {
+        "resultmap": [
+            {
+                "deliveryFee": 600,
+                "venderId": 1015,
+                "deliveryType": 1,
+                "destination": "{\"country\":\"AF\",\"regions\":\"BGL,BAL,BAM\",\"id\":\"_trackId11\"}",
+                "templateFeeId": 22,
+                "estimatedDuration": "3"
+            },
+            {
+                "deliveryFee": 800,
+                "venderId": 1015,
+                "deliveryType": 2,
+                "destination": "{\"country\":\"AF\",\"regions\":\"BGL,BDG,BDS\",\"id\":\"_trackId13\"}",
+                "templateFeeId": 23,
+                "estimatedDuration": "5"
+            }
+        ]
+    }
+}
+
+所选地区暂不配送：
+{
+    "code": 500,
+    "msg": "Out of delivery !",
+    "data": {}
+}
+```
