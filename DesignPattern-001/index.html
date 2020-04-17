@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="OpXZN2WdAvHb8imBYSmMWu6jd8f_0G9JJEeyrPYd6qQ" />
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="ulRpbOHQ5k" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.lug.ustc.edu.cn/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.3.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.3.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="什么是模式模式是指从某个具体的形式中得到的一种抽象，在特殊的非任意性的环境中，该形式不断地重复出现。  模式≠某个问题的答案 模式所描述的问题及答案都应有代表性 以不同的形式重复出现 允许应用到不同的环境中去  什么是软件设计模式1) 关注在特定设计环境中重复出现的设计问题，并为它提供一个解决方案MVC模式关注问题——支持用户界面的可变性。解决方案——严格区分职责，将应用程序的核心功 能从其用户界">
+<meta name="keywords" content="设计模式,软件设计原则">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【设计模式笔记】01、设计模式简介">
+<meta property="og:url" content="http://blog.rocye.cn/DesignPattern-001/index.html">
+<meta property="og:site_name" content="Hi, Rocye">
+<meta property="og:description" content="什么是模式模式是指从某个具体的形式中得到的一种抽象，在特殊的非任意性的环境中，该形式不断地重复出现。  模式≠某个问题的答案 模式所描述的问题及答案都应有代表性 以不同的形式重复出现 允许应用到不同的环境中去  什么是软件设计模式1) 关注在特定设计环境中重复出现的设计问题，并为它提供一个解决方案MVC模式关注问题——支持用户界面的可变性。解决方案——严格区分职责，将应用程序的核心功 能从其用户界">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://pajxnp8qc.bkt.clouddn.com//S01_20180831094803.png">
+<meta property="og:image" content="http://pajxnp8qc.bkt.clouddn.com//S01_20180831094917.png">
+<meta property="og:image" content="http://pajxnp8qc.bkt.clouddn.com//S01_20180831094953.png">
+<meta property="og:image" content="http://pajxnp8qc.bkt.clouddn.com//S01_20180831095004.png">
+<meta property="og:image" content="http://pajxnp8qc.bkt.clouddn.com//S01_20180831095037.png">
+<meta property="og:image" content="http://pajxnp8qc.bkt.clouddn.com//S01_20180831095048.png">
+<meta property="og:image" content="http://pajxnp8qc.bkt.clouddn.com//S01_20180831095056.png">
+<meta property="og:image" content="http://pajxnp8qc.bkt.clouddn.com//S01_20180831095128.png">
+<meta property="og:updated_time" content="2018-08-31T03:44:46.697Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【设计模式笔记】01、设计模式简介">
+<meta name="twitter:description" content="什么是模式模式是指从某个具体的形式中得到的一种抽象，在特殊的非任意性的环境中，该形式不断地重复出现。  模式≠某个问题的答案 模式所描述的问题及答案都应有代表性 以不同的形式重复出现 允许应用到不同的环境中去  什么是软件设计模式1) 关注在特定设计环境中重复出现的设计问题，并为它提供一个解决方案MVC模式关注问题——支持用户界面的可变性。解决方案——严格区分职责，将应用程序的核心功 能从其用户界">
+<meta name="twitter:image" content="http://pajxnp8qc.bkt.clouddn.com//S01_20180831094803.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://blog.rocye.cn/DesignPattern-001/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>【设计模式笔记】01、设计模式简介 | Hi, Rocye</title>
+  
+
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?bfc1740fc4937bf29bbedff4427c2734";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hi, Rocye</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">码农能走多远</p>
+      
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.rocye.cn/DesignPattern-001/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rocye">
+      <meta itemprop="description" content="IT技术分享，个人知识沉淀">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hi, Rocye">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">【设计模式笔记】01、设计模式简介
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-30 17:39:13" itemprop="dateCreated datePublished" datetime="2018-08-30T17:39:13+08:00">2018-08-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-08-31 11:44:46" itemprop="dateModified" datetime="2018-08-31T11:44:46+08:00">2018-08-31</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/设计模式笔记/" itemprop="url" rel="index"><span itemprop="name">设计模式笔记</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="什么是模式"><a href="#什么是模式" class="headerlink" title="什么是模式"></a>什么是模式</h3><p>模式是指从某个具体的形式中得到的一种抽象，在特殊的非任意性的环境中，该形式不断地重复出现。</p>
+<ul>
+<li>模式≠某个问题的答案</li>
+<li>模式所描述的问题及答案都应有代表性</li>
+<li>以不同的形式重复出现</li>
+<li>允许应用到不同的环境中去</li>
+</ul>
+<h3 id="什么是软件设计模式"><a href="#什么是软件设计模式" class="headerlink" title="什么是软件设计模式"></a>什么是软件设计模式</h3><h4 id="1-关注在特定设计环境中重复出现的设计问题，并为它提供一个解决方案"><a href="#1-关注在特定设计环境中重复出现的设计问题，并为它提供一个解决方案" class="headerlink" title="1) 关注在特定设计环境中重复出现的设计问题，并为它提供一个解决方案"></a>1) 关注在特定设计环境中重复出现的设计问题，并为它提供一个解决方案</h4><p>MVC模式关注问题——支持用户界面的可变性。<br>解决方案——严格区分职责，将应用程序的核心功 能从其用户界面中分离出来。</p>
+<h4 id="2-是用文档记录下来的设计经验，来重用设计知识"><a href="#2-是用文档记录下来的设计经验，来重用设计知识" class="headerlink" title="2) 是用文档记录下来的设计经验，来重用设计知识"></a>2) 是用文档记录下来的设计经验，来重用设计知识</h4><p>这种设计经验是现已存在的、经过充分考验的、不是人工发明或创造的。</p>
+<h4 id="3-是类和实例层次（或组件层次）之上的抽象"><a href="#3-是类和实例层次（或组件层次）之上的抽象" class="headerlink" title="3) 是类和实例层次（或组件层次）之上的抽象"></a>3) 是类和实例层次（或组件层次）之上的抽象</h4><p>一个模式描述几个组件、类或对象，并详细说明它们的职责和关系以及它们之间的合作。所有组件共同解决模式关注的问题，而且通常比单个组件更有效。<br>例如，MVC模式描述了三个合作组件的三元组，每个 MVC三元组也同系统的其他的MVC三元组合作。</p>
+<h4 id="4-提供一种设计原则的公共词汇和理解"><a href="#4-提供一种设计原则的公共词汇和理解" class="headerlink" title="4) 提供一种设计原则的公共词汇和理解"></a>4) 提供一种设计原则的公共词汇和理解</h4><p>模式名称是对问题及方案需求的简洁描述。<br>例如， MVC 在20世纪80年代就被有关团体熟悉。</p>
+<h4 id="5-提供设计软件系统时的基本构想（Vision）"><a href="#5-提供设计软件系统时的基本构想（Vision）" class="headerlink" title="5) 提供设计软件系统时的基本构想（Vision）"></a>5) 提供设计软件系统时的基本构想（Vision）</h4><p>MVC模式基本构想：使核心功能与用户输入和信息显示分离。</p>
+<h4 id="6-描述一种处理所关注问题的可行方法，有助于管理软件复杂度"><a href="#6-描述一种处理所关注问题的可行方法，有助于管理软件复杂度" class="headerlink" title="6) 描述一种处理所关注问题的可行方法，有助于管理软件复杂度"></a>6) 描述一种处理所关注问题的可行方法，有助于管理软件复杂度</h4><p>包括：<br>    ● 所需组件的种类<br>    ● 它们的作用<br>    ● 要隐藏的细节<br>    ● 应为可视化的抽象<br>    ● 各要素如何工作</p>
+<h4 id="7-模式提供一个功能行为的基本框架属性——软件系统的非功能需求"><a href="#7-模式提供一个功能行为的基本框架属性——软件系统的非功能需求" class="headerlink" title="7) 模式提供一个功能行为的基本框架属性——软件系统的非功能需求"></a>7) 模式提供一个功能行为的基本框架属性——软件系统的非功能需求</h4><p>可更改性、可靠性、可测试性、可重用性；<br>有的模式用于维护合作组件之间的一致性；<br>有的模式提供透明对等的进程间通信；<br>例如：MVC模式支持用户界面的可更改性和核心功能的可重用性。</p>
+<h4 id="8-提供建立一个复杂软件体系结构组件、作用及相互关系的预定义集"><a href="#8-提供建立一个复杂软件体系结构组件、作用及相互关系的预定义集" class="headerlink" title="8) 提供建立一个复杂软件体系结构组件、作用及相互关系的预定义集"></a>8) 提供建立一个复杂软件体系结构组件、作用及相互关系的预定义集</h4><p>有助于选择和评估方案。提高设计速度和质量。<br>但模式只确定解决设计问题的基本结构，即一般图式（ Schema），不给出完整的可使用的预制模式。</p>
+<h3 id="模式的四个基本要素"><a href="#模式的四个基本要素" class="headerlink" title="模式的四个基本要素"></a>模式的四个基本要素</h3><ul>
+<li>模式名称</li>
+<li>问题</li>
+<li>解决方案</li>
+<li>末态环境后果</li>
+</ul>
+<h3 id="模式中常用图例说明"><a href="#模式中常用图例说明" class="headerlink" title="模式中常用图例说明"></a>模式中常用图例说明</h3><p><img src="http://pajxnp8qc.bkt.clouddn.com//S01_20180831094803.png" alt="类图">● 图片中的空心三角箭头，代表着继承（extends）或实现（Implement）关系， 由继承者/实现者 指向 被继承者/被继承者。<br>● 图片中的实心三角箭头且箭头末尾没有圆圈的， 代表着单一的引用关系， 但是被引用的对象也有可能被其他对象引用。<br>● 图片中的实心三角箭头且箭头末尾有圆圈的， 代表着一对多的引用关系。<br>● 图片中的末端有圆圈的虚线是一个对方法体内容用伪代码说明的关系。</p>
+<h3 id="公认的软件设计原则"><a href="#公认的软件设计原则" class="headerlink" title="公认的软件设计原则"></a>公认的软件设计原则</h3><p>目标：构建松散耦合的系统。<br>Spring就是按照这些设计原则进行设计的，所以如果能把这些原则理解透彻，我们就能非常自如的使用Spring来构建可靠稳定健壮的系统。</p>
+<h4 id="1-开-闭原则-Open-Closed-Principle-OCP"><a href="#1-开-闭原则-Open-Closed-Principle-OCP" class="headerlink" title="1) 开-闭原则(Open-Closed Principle, OCP)"></a>1) 开-闭原则(Open-Closed Principle, OCP)</h4><p>一个软件实体应当对扩展开发，对修改关闭。说的是在设计一个模块的时候，应当使这个模块可以在不被修改的前提下被扩展。换言之，应当可以在不必修改源代码的情况下改变这个模块的行为，在保持系统一定稳定性的基础上，对系统进行扩展。这是面向对象设计（OOD）的基石，也是最重要的原则。</p>
+<h5 id="重点："><a href="#重点：" class="headerlink" title="重点："></a>重点：</h5><ul>
+<li>不修改源代码前提下进行系统功能扩展或更新</li>
+<li>如果直接修改源代码，之前的测试就废了，需要重新测试</li>
+<li>所以通过增加代码的方式扩展系统功能更可靠</li>
+<li>Spring的体现：新建一个类注册后直接装配这个新的Bean</li>
+</ul>
+<h5 id="举例："><a href="#举例：" class="headerlink" title="举例："></a>举例：</h5><p>玉帝招安美猴王之法<br><img src="http://pajxnp8qc.bkt.clouddn.com//S01_20180831094917.png" alt="S01_20180831094917.png"></p>
+<ol>
+<li>不允许更改系统的抽象层 —— 现有的天庭秩序</li>
+<li>允许扩展实现层 —— 弻马温</li>
+</ol>
+<h4 id="2-里氏代换原则-Liskov-Substitution-Principle-LSP"><a href="#2-里氏代换原则-Liskov-Substitution-Principle-LSP" class="headerlink" title="2) 里氏代换原则(Liskov Substitution Principle, LSP)"></a>2) 里氏代换原则(Liskov Substitution Principle, LSP)</h4><p>表述1：如果对每一个类型为T1的对象O1，都有类型为T2的对象O2。使得以T1定义的所有程序P在所有的对象O1都代换成O2时，程序P的行为没有变化，那么类型T2是类型T1的子类型。<br>表述2：一个软件实体如果适用一个基类对象，那么一定适用于其子类对象。<br>表述3：使用指向基类的指针或引用的函数，必须能够在不知道具体派生类对象类型的情况下使用它们。</p>
+<p>PS：子类必须具备基类的全部接口；子类必须包括比基类型更宽的接口</p>
+<h5 id="重点：-1"><a href="#重点：-1" class="headerlink" title="重点："></a>重点：</h5><ul>
+<li>里氏代换原则是继承复用的基石，是对“开—闭”原则的补充，是对实现抽象化的具体步骤的规范，里氏代换原则是开—闭原则的必要条件。</li>
+<li>一般而言，违反里氏代换原则的，也违背“开—闭”原则，反过来不一定成立。</li>
+<li>只有当衍生类可以替换掉基类，软件单位的功能不会受到影响时，基类才能真正被复用。而衍生类也才能够在基类的基础上增加新的行为。</li>
+</ul>
+<h5 id="举例：-1"><a href="#举例：-1" class="headerlink" title="举例："></a>举例：</h5><p>假设有两个类： Base 类，Derived类，且 Derived 类是 Base类的子类。<br>一个方法如果可以接受一个基类对象 b 的话： method (b)，那么它必然可以接受一个子类对象 d ，也可以有method (d)。<br>反过来的代换不成立，即如果一个软件实体使用的是一个子类的话，那么它不一定适用于基类。</p>
+<h4 id="3-依赖倒置原则-Dependence-Inversion-Principle"><a href="#3-依赖倒置原则-Dependence-Inversion-Principle" class="headerlink" title="3) 依赖倒置原则(Dependence Inversion Principle)"></a>3) 依赖倒置原则(Dependence Inversion Principle)</h4><p>● 优点：<br>不必知道对象的类型，只要对象遵守接口。<br>不必知道对象的类，只需知道定义接口的抽象类。<br>降低了子系统间的实现依赖。</p>
+<p>依赖倒转关系强调了系统内的实体之间关系的灵话性，从具体耦合变为抽象耦合。</p>
+<p>● 不容易实现：<br>创建对象要避免对具体类的直接引用，有时需要创建抽象类。<br>会导致大量的类，维护难度大。<br>倒转原则假定所有的具体类都是会变化的，不排除有一些具体类相当稳定。</p>
+<p>PS：面向接口编程，系统模块化</p>
+<h5 id="重点：-2"><a href="#重点：-2" class="headerlink" title="重点："></a>重点：</h5><ul>
+<li>抽象不应当依赖于细节，细节应当依赖于抽象<br><img src="http://pajxnp8qc.bkt.clouddn.com//S01_20180831094953.png" alt="S01_20180831094953.png"></li>
+<li>依赖于接口，不要依赖于实现<br><img src="http://pajxnp8qc.bkt.clouddn.com//S01_20180831095004.png" alt="S01_20180831095004.png"></li>
+</ul>
+<p>PS：与“开—闭”原则的关系<br>“开一闭”原则是目标，依赖倒转原则是达到这一目标的手段。<br>换言之，要想实现“开—闭”原则，就应当坚持依赖倒转原则。违反依赖倒转原则，就不可能达到“开—闭”原则的要求。</p>
+<h4 id="4-接口隔离原则-Interface-Segregation-Principle-ISP"><a href="#4-接口隔离原则-Interface-Segregation-Principle-ISP" class="headerlink" title="4) 接口隔离原则(Interface Segregation Principle, ISP)"></a>4) 接口隔离原则(Interface Segregation Principle, ISP)</h4><p>面向对象的设计的一个重要内容：准确而恰当地划分角色以及角色所对应的接口。</p>
+<p>“接口”：一个类所提供的所有方法的特征集合的逻辑概念。<br> (1) 接口的划分直接影响类型的划分<br> (2) 接口→剧本中的角色<br> (3) 接口实现→相当于演员<br> (4) 接口隔离原则＝角色隔离原则：每一个角色都应当由一个特定的接口代表</p>
+<h5 id="重点：-3"><a href="#重点：-3" class="headerlink" title="重点："></a>重点：</h5><ul>
+<li>一个类对另一个类的依赖性应当建立在最小的接口上</li>
+<li>使用多个专门的接口比使用单个的总接口要好</li>
+<li>为同一个角色不同的客户端，提供宽、窄不同的接口，叫做定制服务</li>
+</ul>
+<p>PS：接口污染：过于臃肿的接口<br>一个没有经验的设计师往往想节省接口的数目，将差不多的接口合并， 认为是代码优化，这是错误的。<br>将没有关系的接口合并在一起，是对角色和接口的污染。</p>
+<h4 id="5-合成-聚合复用原则-Composite-Aggregate-Reuse-Principle-CARP"><a href="#5-合成-聚合复用原则-Composite-Aggregate-Reuse-Principle-CARP" class="headerlink" title="5) 合成/聚合复用原则(Composite/Aggregate Reuse Principle,CARP)"></a>5) 合成/聚合复用原则(Composite/Aggregate Reuse Principle,CARP)</h4><p>尽量使用合成 /聚合而不是继承来达到对实现的复用，即使用聚合/组合 代替 继承。</p>
+<h5 id="重点：-4"><a href="#重点：-4" class="headerlink" title="重点："></a>重点：</h5><ul>
+<li>使用已有对象，使之成为新对象的一部分：新的对象通过向这些对象的委派达到复用已有功能的目的。</li>
+<li>一个角色如果有更多的责任，那么可以使用合成/聚合关系将新的责任委派到合适的对象。</li>
+<li>可以将已有的对象纳入到新对象中，成为新对象的一部分，新的对象可以调用已有对象的功能。</li>
+<li>新对象存取成分对象的唯一方法是通过成分对象的接口。</li>
+</ul>
+<p>PS：缺点：需要管理较多的对象。</p>
+<h4 id="6-迪米特法则-Law-of-Demeter-LoD"><a href="#6-迪米特法则-Law-of-Demeter-LoD" class="headerlink" title="6) 迪米特法则(Law of Demeter LoD)"></a>6) 迪米特法则(Law of Demeter LoD)</h4><p>迪米特法则又称最少知识原则，最初是用来作为面向对象的系统设计风格的一种法则， 1987 年由 L . Holland 在美国东北大学Demeter 项目设计提出的，因此叫做迪米特法则 。是很多著名系统．比如火星登录软件系统、木星的欧罗巴卫星轨道飞船的软件系统的指导设计原则。</p>
+<p>一个对象应当对其他对象有尽可能少的了解。</p>
+<h5 id="重点：-5"><a href="#重点：-5" class="headerlink" title="重点："></a>重点：</h5><ul>
+<li>只与你直接的朋友们通信</li>
+<li>不要跟“陌生人”说话</li>
+<li>每一个软件单元对其他的单元都只有最少的知识，而且局限于那些与本单位密切相关的软件单位</li>
+</ul>
+<h5 id="举例：-2"><a href="#举例：-2" class="headerlink" title="举例："></a>举例：</h5><p><img src="http://pajxnp8qc.bkt.clouddn.com//S01_20180831095037.png" alt="S01_20180831095037.png"><img src="http://pajxnp8qc.bkt.clouddn.com//S01_20180831095048.png" alt="S01_20180831095048.png"><img src="http://pajxnp8qc.bkt.clouddn.com//S01_20180831095056.png" alt="S01_20180831095056.png"><img src="http://pajxnp8qc.bkt.clouddn.com//S01_20180831095128.png" alt="S01_20180831095128.png"></p>
+<h4 id="7-单一职责原则-Simple-responsibility-pinciple-SRP"><a href="#7-单一职责原则-Simple-responsibility-pinciple-SRP" class="headerlink" title="7) 单一职责原则(Simple responsibility pinciple SRP)"></a>7) 单一职责原则(Simple responsibility pinciple SRP)</h4><p>就一个类而言，应该仅有一个引起它变化的原因，如果你能想到多于一个的动机去改变一个类，那么这个类就具有多于一个的职责。应该把多于的指责分离出去，分别再创建一些类来完成每一个职责。</p>
+<p>系统的每个对象应该将重点放在问题域中的离散抽象上。因此理想的情况下，一个对象只做一件事情。这样在开发中也就带来了诸多的好处：提供了重用性和维护性，也是进行重构的良好的基础。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>设计模式的基础和前提是你的程序尽可能遵循以上原则。</p>
+
+      
+    </div>
+
+    
+
+<div>
+ 
+ 
+    <ul class="post-copyright">
+      <li class="post-copyright-author">
+          <strong>本文作者：</strong>Rocye
+      </li>
+      <li class="post-copyright-link">
+        <strong>本文链接：</strong>
+        <a href="/DesignPattern-001/" title="【设计模式笔记】01、设计模式简介">【设计模式笔记】01、设计模式简介</a>
+      </li>
+      <li class="post-copyright-license">
+        <strong>版权声明： </strong>
+        本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！
+      </li>
+    </ul>
+  
+</div>
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/设计模式/" rel="tag"># 设计模式</a>
+          
+            <a href="/tags/软件设计原则/" rel="tag"># 软件设计原则</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/JAVA8-007/" rel="next" title="【JAVA8笔记】07、新时间和日期">
+                <i class="fa fa-chevron-left"></i> 【JAVA8笔记】07、新时间和日期
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+   <div id="gitalk-container"></div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Rocye" />
+            
+              <p class="site-author-name" itemprop="name">Rocye</p>
+              <p class="site-description motion-element" itemprop="description">IT技术分享，个人知识沉淀</p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是模式"><span class="nav-number">1.</span> <span class="nav-text">什么是模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是软件设计模式"><span class="nav-number">2.</span> <span class="nav-text">什么是软件设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-关注在特定设计环境中重复出现的设计问题，并为它提供一个解决方案"><span class="nav-number">2.1.</span> <span class="nav-text">1) 关注在特定设计环境中重复出现的设计问题，并为它提供一个解决方案</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-是用文档记录下来的设计经验，来重用设计知识"><span class="nav-number">2.2.</span> <span class="nav-text">2) 是用文档记录下来的设计经验，来重用设计知识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-是类和实例层次（或组件层次）之上的抽象"><span class="nav-number">2.3.</span> <span class="nav-text">3) 是类和实例层次（或组件层次）之上的抽象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-提供一种设计原则的公共词汇和理解"><span class="nav-number">2.4.</span> <span class="nav-text">4) 提供一种设计原则的公共词汇和理解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-提供设计软件系统时的基本构想（Vision）"><span class="nav-number">2.5.</span> <span class="nav-text">5) 提供设计软件系统时的基本构想（Vision）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-描述一种处理所关注问题的可行方法，有助于管理软件复杂度"><span class="nav-number">2.6.</span> <span class="nav-text">6) 描述一种处理所关注问题的可行方法，有助于管理软件复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-模式提供一个功能行为的基本框架属性——软件系统的非功能需求"><span class="nav-number">2.7.</span> <span class="nav-text">7) 模式提供一个功能行为的基本框架属性——软件系统的非功能需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-提供建立一个复杂软件体系结构组件、作用及相互关系的预定义集"><span class="nav-number">2.8.</span> <span class="nav-text">8) 提供建立一个复杂软件体系结构组件、作用及相互关系的预定义集</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模式的四个基本要素"><span class="nav-number">3.</span> <span class="nav-text">模式的四个基本要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模式中常用图例说明"><span class="nav-number">4.</span> <span class="nav-text">模式中常用图例说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公认的软件设计原则"><span class="nav-number">5.</span> <span class="nav-text">公认的软件设计原则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-开-闭原则-Open-Closed-Principle-OCP"><span class="nav-number">5.1.</span> <span class="nav-text">1) 开-闭原则(Open-Closed Principle, OCP)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#重点："><span class="nav-number">5.1.1.</span> <span class="nav-text">重点：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#举例："><span class="nav-number">5.1.2.</span> <span class="nav-text">举例：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-里氏代换原则-Liskov-Substitution-Principle-LSP"><span class="nav-number">5.2.</span> <span class="nav-text">2) 里氏代换原则(Liskov Substitution Principle, LSP)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#重点：-1"><span class="nav-number">5.2.1.</span> <span class="nav-text">重点：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#举例：-1"><span class="nav-number">5.2.2.</span> <span class="nav-text">举例：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-依赖倒置原则-Dependence-Inversion-Principle"><span class="nav-number">5.3.</span> <span class="nav-text">3) 依赖倒置原则(Dependence Inversion Principle)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#重点：-2"><span class="nav-number">5.3.1.</span> <span class="nav-text">重点：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-接口隔离原则-Interface-Segregation-Principle-ISP"><span class="nav-number">5.4.</span> <span class="nav-text">4) 接口隔离原则(Interface Segregation Principle, ISP)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#重点：-3"><span class="nav-number">5.4.1.</span> <span class="nav-text">重点：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-合成-聚合复用原则-Composite-Aggregate-Reuse-Principle-CARP"><span class="nav-number">5.5.</span> <span class="nav-text">5) 合成/聚合复用原则(Composite/Aggregate Reuse Principle,CARP)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#重点：-4"><span class="nav-number">5.5.1.</span> <span class="nav-text">重点：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-迪米特法则-Law-of-Demeter-LoD"><span class="nav-number">5.6.</span> <span class="nav-text">6) 迪米特法则(Law of Demeter LoD)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#重点：-5"><span class="nav-number">5.6.1.</span> <span class="nav-text">重点：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#举例：-2"><span class="nav-number">5.6.2.</span> <span class="nav-text">举例：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-单一职责原则-Simple-responsibility-pinciple-SRP"><span class="nav-number">5.7.</span> <span class="nav-text">7) 单一职责原则(Simple responsibility pinciple SRP)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Rocye</span>
+
+  
+
+  
+</div>
+
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a> v6.3.0</div>
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.3.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.3.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.3.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.3.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="/css/gitalk.css">
+  <script src="/js/src/gitalk.min.js"></script>
+  <script type="text/javascript">
+		var gitalk = new Gitalk({
+		  clientID: '24d625e4ea38f7e4c002',
+		  clientSecret: 'f9d911e6d654ce10e0594e2da2bce085ec651b54',
+		  repo: 'BlogComments',
+		  owner: 'rocye',
+		  admin: ['rocye'],
+		  id: location.pathname,
+		  distractionFreeMode: 'true'
+		})
+		gitalk.render('gitalk-container')
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
