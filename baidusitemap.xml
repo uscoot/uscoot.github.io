@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/DesignPattern-001/</loc>
+    <lastmod>2018-08-31T03:44:46.697Z</lastmod>
+    <data>
+        <display>
+        <title>【设计模式笔记】01、设计模式简介</title>
+        <pubTime>2018-08-30T09:39:13.000Z</pubTime>
+        
+        <tag>设计模式</tag>
+         
+        <tag>软件设计原则</tag>
+         
+         
+           
+             
+              <breadCrumb title="设计模式笔记" url="http://blog.rocye.cn/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/JAVA8-007/</loc>
+    <lastmod>2018-07-31T01:39:08.863Z</lastmod>
+    <data>
+        <display>
+        <title>【JAVA8笔记】07、新时间和日期</title>
+        <pubTime>2018-07-20T09:27:03.000Z</pubTime>
+        
+        <tag>Java8</tag>
+         
+         
+           
+             
+              <breadCrumb title="JAVA8笔记" url="http://blog.rocye.cn/categories/JAVA8%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/JAVA8-006/</loc>
+    <lastmod>2018-07-20T09:26:29.032Z</lastmod>
+    <data>
+        <display>
+        <title>【JAVA8笔记】06、Optional容器类</title>
+        <pubTime>2018-07-20T08:16:49.000Z</pubTime>
+        
+        <tag>Java8</tag>
+         
+        <tag>Optional</tag>
+         
+         
+           
+             
+              <breadCrumb title="JAVA8笔记" url="http://blog.rocye.cn/categories/JAVA8%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/JAVA8-005/</loc>
+    <lastmod>2018-07-18T08:39:36.778Z</lastmod>
+    <data>
+        <display>
+        <title>【JAVA8笔记】05、Stream API</title>
+        <pubTime>2018-07-18T06:42:21.000Z</pubTime>
+        
+        <tag>Java8</tag>
+         
+         
+           
+             
+              <breadCrumb title="JAVA8笔记" url="http://blog.rocye.cn/categories/JAVA8%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/JAVA8-004/</loc>
+    <lastmod>2018-07-18T06:39:31.653Z</lastmod>
+    <data>
+        <display>
+        <title>【JAVA8笔记】04、方法引用</title>
+        <pubTime>2018-07-18T05:47:11.000Z</pubTime>
+        
+        <tag>Java8</tag>
+         
+         
+           
+             
+              <breadCrumb title="JAVA8笔记" url="http://blog.rocye.cn/categories/JAVA8%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/SpringCloud-010/</loc>
+    <lastmod>2018-07-18T06:20:06.349Z</lastmod>
+    <data>
+        <display>
+        <title>【SpringCloud笔记】10、Bus - 消息总线</title>
+        <pubTime>2018-07-11T07:15:54.000Z</pubTime>
+        
+        <tag>SpringCloud</tag>
+         
+        <tag>Bus</tag>
+         
+         
+           
+             
+              <breadCrumb title="SpringCloud笔记" url="http://blog.rocye.cn/categories/SpringCloud%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/JAVA8-003/</loc>
+    <lastmod>2018-07-18T06:18:36.247Z</lastmod>
+    <data>
+        <display>
+        <title>【JAVA8笔记】03、Lambda语法和函数式接口</title>
+        <pubTime>2018-07-17T07:12:45.000Z</pubTime>
+        
+        <tag>Java8</tag>
+         
+        <tag>Lambda</tag>
+         
+         
+           
+             
+              <breadCrumb title="JAVA8笔记" url="http://blog.rocye.cn/categories/JAVA8%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/SpringCloud-001/</loc>
+    <lastmod>2018-07-17T08:00:04.397Z</lastmod>
+    <data>
+        <display>
+        <title>【SpringCloud笔记】01、从微服务框架到SpringCloud</title>
+        <pubTime>2018-06-19T02:25:39.000Z</pubTime>
+        
+        <tag>SpringCloud</tag>
+         
+        <tag>微服务框架</tag>
+         
+         
+           
+             
+              <breadCrumb title="SpringCloud笔记" url="http://blog.rocye.cn/categories/SpringCloud%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/SpringCloud-002/</loc>
+    <lastmod>2018-07-17T07:59:56.143Z</lastmod>
+    <data>
+        <display>
+        <title>【SpringCloud笔记】02、Eureka - 服务的注册与发现</title>
+        <pubTime>2018-06-19T08:58:55.000Z</pubTime>
+        
+        <tag>SpringCloud</tag>
+         
+        <tag>Eureka</tag>
+         
+         
+           
+             
+              <breadCrumb title="SpringCloud笔记" url="http://blog.rocye.cn/categories/SpringCloud%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/SpringCloud-003/</loc>
+    <lastmod>2018-07-17T07:59:50.373Z</lastmod>
+    <data>
+        <display>
+        <title>【SpringCloud笔记】03、Ribbon - 客户端负载均衡器</title>
+        <pubTime>2018-06-21T02:42:11.000Z</pubTime>
+        
+        <tag>SpringCloud</tag>
+         
+        <tag>Ribbon</tag>
+         
+         
+           
+             
+              <breadCrumb title="SpringCloud笔记" url="http://blog.rocye.cn/categories/SpringCloud%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/SpringCloud-004/</loc>
+    <lastmod>2018-07-17T07:59:45.227Z</lastmod>
+    <data>
+        <display>
+        <title>【SpringCloud笔记】04、Feign - 声明式REST客户端</title>
+        <pubTime>2018-06-21T08:41:18.000Z</pubTime>
+        
+        <tag>SpringCloud</tag>
+         
+        <tag>Feign</tag>
+         
+         
+           
+             
+              <breadCrumb title="SpringCloud笔记" url="http://blog.rocye.cn/categories/SpringCloud%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/SpringCloud-005/</loc>
+    <lastmod>2018-07-17T07:59:37.492Z</lastmod>
+    <data>
+        <display>
+        <title>【SpringCloud笔记】05、Hystrix - 断路器之在Ribbon中的使用</title>
+        <pubTime>2018-06-22T07:48:45.000Z</pubTime>
+        
+        <tag>SpringCloud</tag>
+         
+        <tag>Ribbon</tag>
+         
+        <tag>Hystrix</tag>
+         
+         
+           
+             
+              <breadCrumb title="SpringCloud笔记" url="http://blog.rocye.cn/categories/SpringCloud%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/SpringCloud-006/</loc>
+    <lastmod>2018-07-17T07:59:30.894Z</lastmod>
+    <data>
+        <display>
+        <title>【SpringCloud笔记】06、Hystrix - 断路器之在Feign中的使用</title>
+        <pubTime>2018-06-22T21:59:07.000Z</pubTime>
+        
+        <tag>SpringCloud</tag>
+         
+        <tag>Feign</tag>
+         
+        <tag>Hystrix</tag>
+         
+         
+           
+             
+              <breadCrumb title="SpringCloud笔记" url="http://blog.rocye.cn/categories/SpringCloud%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/SpringCloud-007/</loc>
+    <lastmod>2018-07-17T07:59:25.875Z</lastmod>
+    <data>
+        <display>
+        <title>【SpringCloud笔记】07、Turbine - 断路器集群监控</title>
+        <pubTime>2018-06-28T08:13:42.000Z</pubTime>
+        
+        <tag>SpringCloud</tag>
+         
+        <tag>Hystrix</tag>
+         
+        <tag>Turbine</tag>
+         
+         
+           
+             
+              <breadCrumb title="SpringCloud笔记" url="http://blog.rocye.cn/categories/SpringCloud%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/SpringCloud-008/</loc>
+    <lastmod>2018-07-17T07:59:17.855Z</lastmod>
+    <data>
+        <display>
+        <title>【SpringCloud笔记】08、Zuul - 路由网关</title>
+        <pubTime>2018-07-03T07:56:39.000Z</pubTime>
+        
+        <tag>SpringCloud</tag>
+         
+        <tag>Zuul</tag>
+         
+         
+           
+             
+              <breadCrumb title="SpringCloud笔记" url="http://blog.rocye.cn/categories/SpringCloud%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/SpringCloud-009/</loc>
+    <lastmod>2018-07-17T07:59:11.467Z</lastmod>
+    <data>
+        <display>
+        <title>【SpringCloud笔记】09、SpringCloudConfig - 分布式配置中心</title>
+        <pubTime>2018-07-09T07:05:32.000Z</pubTime>
+        
+        <tag>SpringCloud</tag>
+         
+        <tag>SpringCloudConfig</tag>
+         
+         
+           
+             
+              <breadCrumb title="SpringCloud笔记" url="http://blog.rocye.cn/categories/SpringCloud%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/JAVA8-001/</loc>
+    <lastmod>2018-07-17T07:57:45.963Z</lastmod>
+    <data>
+        <display>
+        <title>【JAVA8笔记】01、JAVA8新特性简介</title>
+        <pubTime>2018-07-05T03:57:20.000Z</pubTime>
+        
+        <tag>Java8</tag>
+         
+         
+           
+             
+              <breadCrumb title="JAVA8笔记" url="http://blog.rocye.cn/categories/JAVA8%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://blog.rocye.cn/JAVA8-002/</loc>
+    <lastmod>2018-07-17T07:20:43.285Z</lastmod>
+    <data>
+        <display>
+        <title>【JAVA8笔记】02、为什么使用Lambda表达式</title>
+        <pubTime>2018-07-10T06:14:12.000Z</pubTime>
+        
+        <tag>Java8</tag>
+         
+        <tag>Lambda</tag>
+         
+         
+           
+             
+              <breadCrumb title="JAVA8笔记" url="http://blog.rocye.cn/categories/JAVA8%E7%AC%94%E8%AE%B0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+</urlset>
